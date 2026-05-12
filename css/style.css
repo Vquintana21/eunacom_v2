@@ -7,6 +7,20 @@
  */
 
 /* ============================================
+   PALETA INSTITUCIONAL
+   ============================================ */
+:root {
+    --color-primary:            #005587;
+    --color-primary-dark:       #17375c;
+    --color-primary-light:      #4489c9;
+    --color-accent:             #e1261d;
+    --color-primary-hover:      #004470;
+    --color-primary-dark-hover: #122a47;
+    --color-primary-light-hover:#3378b8;
+    --color-accent-hover:       #c41f17;
+}
+
+/* ============================================
    RESET Y BASE
    ============================================ */
 * {
