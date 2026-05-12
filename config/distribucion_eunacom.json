@@ -1,0 +1,65 @@
+{
+    "1": {
+        "nombre": "Medicina Interna",
+        "total": 67,
+        "especialidades": {
+            "1": 10,
+            "5": 10,
+            "6": 10,
+            "3": 5,
+            "2": 5,
+            "10": 5,
+            "9": 5,
+            "8": 5,
+            "4": 4,
+            "11": 4,
+            "7": 4
+        }
+    },
+    "4": {
+        "nombre": "Cirugía",
+        "total": 20,
+        "especialidades": {
+            "1": 10,
+            "2": 5,
+            "3": 5
+        }
+    },
+    "2": {
+        "nombre": "Pediatría",
+        "total": 29,
+        "especialidades": {
+            "1": 29
+        }
+    },
+    "3": {
+        "nombre": "Obstetricia y Ginecología",
+        "total": 29,
+        "especialidades": {
+            "1": 29
+        }
+    },
+    "5": {
+        "nombre": "Psiquiatría",
+        "total": 14,
+        "especialidades": {
+            "1": 14
+        }
+    },
+    "7": {
+        "nombre": "Salud Pública",
+        "total": 9,
+        "especialidades": {
+            "1": 9
+        }
+    },
+    "6": {
+        "nombre": "Especialidades",
+        "total": 12,
+        "especialidades": {
+            "1": 4,
+            "2": 4,
+            "3": 4
+        }
+    }
+}
