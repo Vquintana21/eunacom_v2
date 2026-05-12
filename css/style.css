@@ -7,6 +7,20 @@
  */
 
 /* ============================================
+   PALETA INSTITUCIONAL
+   ============================================ */
+:root {
+    --color-primary:            #005587;
+    --color-primary-dark:       #17375c;
+    --color-primary-light:      #4489c9;
+    --color-accent:             #e1261d;
+    --color-primary-hover:      #004470;
+    --color-primary-dark-hover: #122a47;
+    --color-primary-light-hover:#3378b8;
+    --color-accent-hover:       #c41f17;
+}
+
+/* ============================================
    RESET Y BASE
    ============================================ */
 * {
@@ -724,4 +738,2103 @@ button[type="submit"]:active {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ============================================
+   PAGE: SIMULACRO INICIO
+   ============================================ */
+
+body.page-simulacro-inicio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-inicio .container {
+    max-width: 800px;
+    width: 100%;
+}
+
+body.page-simulacro-inicio .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+body.page-simulacro-inicio h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body.page-simulacro-inicio .subtitle {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-inicio .info-box {
+    background: #e3f2fd;
+    border-left: 4px solid var(--color-primary-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-inicio .info-box h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+body.page-simulacro-inicio .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+body.page-simulacro-inicio .info-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+body.page-simulacro-inicio .info-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary-light);
+}
+
+body.page-simulacro-inicio .info-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+body.page-simulacro-inicio .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-inicio .warning-box h3 {
+    color: #856404;
+    margin-bottom: 15px;
+}
+
+body.page-simulacro-inicio .warning-box ul {
+    margin-left: 20px;
+    color: #856404;
+}
+
+body.page-simulacro-inicio .warning-box li {
+    margin-bottom: 8px;
+}
+
+body.page-simulacro-inicio .btn {
+    background: var(--color-primary-light);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+body.page-simulacro-inicio .btn:hover {
+    background: #1976d2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+}
+
+body.page-simulacro-inicio .btn-continuar {
+    background: #ff9800;
+}
+
+body.page-simulacro-inicio .btn-continuar:hover {
+    background: #f57c00;
+}
+
+body.page-simulacro-inicio .error-box {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-accent);
+}
+
+body.page-simulacro-inicio .error-box strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-inicio .error-trace {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+body.page-simulacro-inicio .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body.page-simulacro-inicio .modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body.page-simulacro-inicio .modal-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+body.page-simulacro-inicio .modal-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+body.page-simulacro-inicio .modal-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-inicio .countdown {
+    font-size: 6rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 30px 0;
+    animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+body.page-simulacro-inicio .loading-bar {
+    width: 100%;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+body.page-simulacro-inicio .loading-progress {
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 10px;
+    animation: loading 3s linear;
+}
+
+@keyframes loading {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* ============================================
+   PAGE: SIMULACRO EXAMEN
+   ============================================ */
+
+body.page-simulacro-examen {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.page-simulacro-examen .header-bar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.page-simulacro-examen .header-info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+body.page-simulacro-examen .exam-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+body.page-simulacro-examen .session-badge {
+    background: var(--color-primary-light);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+body.page-simulacro-examen .timer-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+body.page-simulacro-examen .timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Courier New', monospace;
+    min-width: 150px;
+    text-align: center;
+}
+
+body.page-simulacro-examen .timer.warning {
+    color: #f39c12;
+    animation: pulse 1s infinite;
+}
+
+body.page-simulacro-examen .timer.danger {
+    color: var(--color-accent);
+    animation: pulse 0.5s infinite;
+}
+
+body.page-simulacro-examen .main-content {
+    margin-top: 80px;
+    display: flex;
+    flex: 1;
+}
+
+body.page-simulacro-examen .sidebar {
+    width: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+    position: fixed;
+    left: 0;
+    top: 80px;
+}
+
+body.page-simulacro-examen .sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-examen .progress-info {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-examen .progress-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+body.page-simulacro-examen .progress-label {
+    color: #7f8c8d;
+}
+
+body.page-simulacro-examen .progress-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+body.page-simulacro-examen .questions-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+}
+
+body.page-simulacro-examen .question-nav-btn {
+    aspect-ratio: 1;
+    border: 2px solid #bdc3c7;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-examen .question-nav-btn:hover {
+    transform: scale(1.1);
+}
+
+body.page-simulacro-examen .question-nav-btn.answered {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+body.page-simulacro-examen .question-nav-btn.marked {
+    background: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
+
+body.page-simulacro-examen .question-nav-btn.marked-empty {
+    background: #ffe0b2;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+body.page-simulacro-examen .question-nav-btn.current {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light-hover);
+    color: white;
+    transform: scale(1.15);
+}
+
+body.page-simulacro-examen .question-area {
+    margin-left: 320px;
+    padding: 30px;
+    flex: 1;
+}
+
+body.page-simulacro-examen .question-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-examen .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+body.page-simulacro-examen .question-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+}
+
+body.page-simulacro-examen .question-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+body.page-simulacro-examen .question-text {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+body.page-simulacro-examen .alternatives {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+body.page-simulacro-examen .alternative {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+body.page-simulacro-examen .alternative:hover {
+    background: #e3f2fd;
+    border-color: var(--color-primary-light);
+}
+
+body.page-simulacro-examen .alternative input[type="radio"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+body.page-simulacro-examen .alternative.selected {
+    background: #e3f2fd;
+    border-color: var(--color-primary-light);
+    border-width: 3px;
+}
+
+body.page-simulacro-examen .option-letter {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: var(--color-primary-light);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+body.page-simulacro-examen .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+body.page-simulacro-examen .btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.page-simulacro-examen .btn-previous {
+    background: #95a5a6;
+    color: white;
+}
+
+body.page-simulacro-examen .btn-previous:hover {
+    background: #7f8c8d;
+}
+
+body.page-simulacro-examen .btn-next {
+    background: var(--color-primary-light);
+    color: white;
+}
+
+body.page-simulacro-examen .btn-next:hover {
+    background: var(--color-primary-light-hover);
+}
+
+body.page-simulacro-examen .btn-mark {
+    background: #f39c12;
+    color: white;
+}
+
+body.page-simulacro-examen .btn-mark:hover {
+    background: #e67e22;
+}
+
+body.page-simulacro-examen .btn-mark.marked {
+    background: #e67e22;
+}
+
+body.page-simulacro-examen .btn-finish {
+    background: #27ae60;
+    color: white;
+    flex: 1;
+}
+
+body.page-simulacro-examen .btn-finish:hover {
+    background: #229954;
+}
+
+body.page-simulacro-examen .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-examen .modal.show {
+    display: flex;
+}
+
+body.page-simulacro-examen .modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+}
+
+body.page-simulacro-examen .modal-content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-examen .modal-stats {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+body.page-simulacro-examen .modal-stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-examen .modal-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+body.page-simulacro-examen .btn-cancel {
+    background: var(--color-accent);
+    color: white;
+}
+
+body.page-simulacro-examen .btn-cancel:hover {
+    background: var(--color-accent-hover);
+}
+
+body.page-simulacro-examen .btn-confirm {
+    background: #27ae60;
+    color: white;
+    flex: 1;
+}
+
+body.page-simulacro-examen .btn-danger {
+    background: var(--color-accent);
+    color: white;
+    flex: 1;
+}
+
+body.page-simulacro-examen .btn-danger:hover {
+    background: var(--color-accent-hover);
+}
+
+body.page-simulacro-examen .sidebar-toggle {
+    display: none;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 1001;
+    background: var(--color-primary-light);
+    border: none;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+body.page-simulacro-examen .sidebar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+body.page-simulacro-examen .sidebar-toggle:active {
+    transform: scale(0.95);
+}
+
+body.page-simulacro-examen .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+body.page-simulacro-examen .sidebar-overlay.active {
+    opacity: 1;
+}
+
+body.page-simulacro-examen .sidebar-close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1001;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body.page-simulacro-examen .sidebar-toggle {
+        display: flex;
+    }
+
+    body.page-simulacro-examen .sidebar-close {
+        display: block;
+    }
+
+    body.page-simulacro-examen .header-bar {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body.page-simulacro-examen .header-info {
+        flex: 1;
+        min-width: 100%;
+        order: 1;
+        margin-left: 60px;
+    }
+
+    body.page-simulacro-examen .exam-title {
+        font-size: 1rem;
+    }
+
+    body.page-simulacro-examen .session-badge {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    body.page-simulacro-examen .timer-container {
+        flex: 1;
+        min-width: 100%;
+        order: 2;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    body.page-simulacro-examen .timer {
+        font-size: 1.5rem;
+        min-width: auto;
+    }
+
+    body.page-simulacro-examen .btn-finish,
+    body.page-simulacro-examen .btn-cancel {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        flex: 1;
+    }
+
+    body.page-simulacro-examen .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        width: 85%;
+        max-width: 350px;
+        max-height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        padding-top: 60px;
+        overflow-y: auto;
+    }
+
+    body.page-simulacro-examen .sidebar.active {
+        left: 0;
+    }
+
+    body.page-simulacro-examen .main-content {
+        margin-top: 120px;
+        flex-direction: column;
+    }
+
+    body.page-simulacro-examen .question-area {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    body.page-simulacro-examen .questions-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+
+    body.page-simulacro-examen .question-nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    body.page-simulacro-examen .question-card {
+        padding: 20px 15px;
+    }
+
+    body.page-simulacro-examen .question-text {
+        font-size: 1.1rem;
+    }
+
+    body.page-simulacro-examen .alternatives {
+        gap: 15px;
+    }
+
+    body.page-simulacro-examen .alternative {
+        padding: 18px;
+        min-height: 60px;
+    }
+
+    body.page-simulacro-examen .alternative input[type="radio"] {
+        width: 24px;
+        height: 24px;
+    }
+
+    body.page-simulacro-examen .option-letter {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    body.page-simulacro-examen .navigation-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body.page-simulacro-examen .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    body.page-simulacro-examen .btn-previous,
+    body.page-simulacro-examen .btn-next {
+        flex: 1;
+        min-width: calc(50% - 5px);
+    }
+
+    body.page-simulacro-examen .btn-mark {
+        width: 100%;
+        order: -1;
+    }
+
+    body.page-simulacro-examen .modal-content {
+        width: 95%;
+        padding: 25px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    body.page-simulacro-examen .modal-content h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body.page-simulacro-examen .questions-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    body.page-simulacro-examen .timer {
+        font-size: 1.3rem;
+    }
+
+    body.page-simulacro-examen .btn-finish,
+    body.page-simulacro-examen .btn-cancel {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+
+    body.page-simulacro-examen .question-text {
+        font-size: 1rem;
+    }
+
+    body.page-simulacro-examen .option-letter {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   PAGE: SIMULACRO RESULTADOS
+   ============================================ */
+
+body.page-simulacro-resultados {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-resultados .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.page-simulacro-resultados .card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-resultados .header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1EA4ED 0%, var(--color-primary-light) 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+body.page-simulacro-resultados .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-resultados .header .codigo {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+body.page-simulacro-resultados .score-section {
+    text-align: center;
+    padding: 40px;
+}
+
+body.page-simulacro-resultados .score-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    border: 10px solid;
+    position: relative;
+}
+
+body.page-simulacro-resultados .score-percentage {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+body.page-simulacro-resultados .score-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+body.page-simulacro-resultados .score-message {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+body.page-simulacro-resultados .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+body.page-simulacro-resultados .stat-box {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid #e9ecef;
+}
+
+body.page-simulacro-resultados .stat-box.correctas {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+body.page-simulacro-resultados .stat-box.incorrectas {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+body.page-simulacro-resultados .stat-box.omitidas {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
+body.page-simulacro-resultados .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-resultados .stat-number.correctas { color: #155724; }
+body.page-simulacro-resultados .stat-number.incorrectas { color: #721c24; }
+body.page-simulacro-resultados .stat-number.omitidas { color: #856404; }
+
+body.page-simulacro-resultados .stat-label {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+body.page-simulacro-resultados h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+body.page-simulacro-resultados table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body.page-simulacro-resultados thead {
+    background: var(--color-primary-light);
+    color: white;
+}
+
+body.page-simulacro-resultados th, body.page-simulacro-resultados td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+body.page-simulacro-resultados tbody tr:hover {
+    background: #f8f9fa;
+}
+
+body.page-simulacro-resultados .progress-bar-container {
+    width: 100%;
+    height: 25px;
+    background: #e9ecef;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+body.page-simulacro-resultados .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: width 1s ease;
+}
+
+body.page-simulacro-resultados .progress-bar.bajo {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+}
+
+body.page-simulacro-resultados .progress-bar.medio {
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+}
+
+body.page-simulacro-resultados .progress-bar.alto {
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+}
+
+body.page-simulacro-resultados .actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+body.page-simulacro-resultados .btn {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+body.page-simulacro-resultados .btn-primary {
+    background: var(--color-primary-light);
+    color: white;
+}
+
+body.page-simulacro-resultados .btn-primary:hover {
+    background: var(--color-primary-light-hover);
+    transform: translateY(-2px);
+}
+
+body.page-simulacro-resultados .btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+body.page-simulacro-resultados .btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+body.page-simulacro-resultados .btn-success {
+    background: #2A7B9B;
+    color: white;
+}
+
+body.page-simulacro-resultados .btn-success:hover {
+    background: #57C785;
+}
+
+body.page-simulacro-resultados .meta-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+body.page-simulacro-resultados .meta-item {
+    text-align: center;
+}
+
+body.page-simulacro-resultados .meta-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+body.page-simulacro-resultados .meta-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* ============================================
+   PAGE: SIMULACRO REVISION
+   ============================================ */
+
+body.page-simulacro-revision {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-revision .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.page-simulacro-revision .header {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-revision .header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-revision .header .subtitle {
+    color: #7f8c8d;
+}
+
+body.page-simulacro-revision .filtros {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+body.page-simulacro-revision .filtro-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+body.page-simulacro-revision .filtro-group label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+body.page-simulacro-revision .btn-filtro {
+    padding: 8px 20px;
+    border: 2px solid #e9ecef;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #2c3e50;
+    display: inline-block;
+    font-weight: 500;
+}
+
+body.page-simulacro-revision .btn-filtro:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary-light);
+}
+
+body.page-simulacro-revision .btn-filtro.active {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    color: white;
+}
+
+body.page-simulacro-revision .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-revision .stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+body.page-simulacro-revision .stat-card.correctas {
+    background: #d4edda;
+    color: #155724;
+}
+
+body.page-simulacro-revision .stat-card.incorrectas {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+body.page-simulacro-revision .stat-card.omitidas {
+    background: #fff3cd;
+    color: #856404;
+}
+
+body.page-simulacro-revision .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+body.page-simulacro-revision .stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+body.page-simulacro-revision .pregunta-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-revision .pregunta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+body.page-simulacro-revision .pregunta-numero {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-revision .pregunta-meta {
+    text-align: right;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+body.page-simulacro-revision .pregunta-texto {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+body.page-simulacro-revision .alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-revision .alternativa {
+    background: #f8f9fa;
+    border: 3px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+body.page-simulacro-revision .alternativa.correcta {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+body.page-simulacro-revision .alternativa.incorrecta {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+body.page-simulacro-revision .alternativa.seleccionada-incorrecta {
+    background: #ffebee;
+    border-color: #e53935;
+}
+
+body.page-simulacro-revision .opcion-letra {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: var(--color-primary-light);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+body.page-simulacro-revision .opcion-letra.correcta {
+    background: #28a745;
+}
+
+body.page-simulacro-revision .opcion-letra.incorrecta {
+    background: #dc3545;
+}
+
+body.page-simulacro-revision .alternativa-texto {
+    flex: 1;
+}
+
+body.page-simulacro-revision .indicador-respuesta {
+    margin-left: auto;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+body.page-simulacro-revision .indicador-respuesta.tu-respuesta-correcta {
+    background: #28a745;
+    color: white;
+}
+
+body.page-simulacro-revision .indicador-respuesta.tu-respuesta-incorrecta {
+    background: #dc3545;
+    color: white;
+}
+
+body.page-simulacro-revision .indicador-respuesta.correcta {
+    background: #28a745;
+    color: white;
+}
+
+body.page-simulacro-revision .explicacion {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+body.page-simulacro-revision .explicacion h4 {
+    color: #856404;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-revision .explicacion-texto {
+    color: #856404;
+    line-height: 1.6;
+}
+
+body.page-simulacro-revision .sin-explicacion {
+    background: #e9ecef;
+    border-left: 4px solid #6c757d;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+body.page-simulacro-revision .no-resultados {
+    background: white;
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+body.page-simulacro-revision .no-resultados-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-revision .acciones {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+body.page-simulacro-revision .btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+body.page-simulacro-revision .btn-primary {
+    background: var(--color-primary-light);
+    color: white;
+}
+
+body.page-simulacro-revision .btn-primary:hover {
+    background: var(--color-primary-light-hover);
+    transform: translateY(-2px);
+}
+
+body.page-simulacro-revision .btn-success {
+    background: #2A7B9B;
+    color: white;
+}
+
+body.page-simulacro-revision .btn-success:hover {
+    background: #57C785;
+}
+
+body.page-simulacro-revision .btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+body.page-simulacro-revision .btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    body.page-simulacro-revision .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.page-simulacro-revision .filtro-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body.page-simulacro-revision .pregunta-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body.page-simulacro-revision .pregunta-meta {
+        text-align: left;
+    }
+}
+
+/* ============================================
+   PAGE: SIMULACRO INTERMEDIO
+   ============================================ */
+
+body.page-simulacro-intermedio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.page-simulacro-intermedio .container {
+    max-width: 900px;
+    width: 100%;
+}
+
+body.page-simulacro-intermedio .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+body.page-simulacro-intermedio h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body.page-simulacro-intermedio .subtitle {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+body.page-simulacro-intermedio .success-icon {
+    text-align: center;
+    font-size: 5rem;
+    margin: 30px 0;
+}
+
+body.page-simulacro-intermedio .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+body.page-simulacro-intermedio .stat-box {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid #e9ecef;
+}
+
+body.page-simulacro-intermedio .stat-box.highlight {
+    background: #e3f2fd;
+    border-color: var(--color-primary-light);
+}
+
+body.page-simulacro-intermedio .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+body.page-simulacro-intermedio .stat-label {
+    color: #7f8c8d;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+body.page-simulacro-intermedio .info-box {
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+body.page-simulacro-intermedio .info-box h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+body.page-simulacro-intermedio .info-box ul {
+    margin-left: 20px;
+    color: #2e7d32;
+}
+
+body.page-simulacro-intermedio .info-box li {
+    margin-bottom: 8px;
+}
+
+body.page-simulacro-intermedio .warning-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+body.page-simulacro-intermedio .warning-box h3 {
+    color: #856404;
+    margin-bottom: 15px;
+}
+
+body.page-simulacro-intermedio .btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 30px;
+}
+
+body.page-simulacro-intermedio .btn:hover {
+    background: #45a049;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
+}
+
+body.page-simulacro-intermedio .timer-descanso {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+body.page-simulacro-intermedio .timer-descanso h3 {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+body.page-simulacro-intermedio .timer-descanso .tiempo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Courier New', monospace;
+}
+
+body.page-simulacro-intermedio .progress-sesiones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+body.page-simulacro-intermedio .sesion-indicator {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 4px solid;
+}
+
+body.page-simulacro-intermedio .sesion-indicator.completada {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+body.page-simulacro-intermedio .sesion-indicator.pendiente {
+    background: #e9ecef;
+    border-color: #6c757d;
+    color: #495057;
+}
+
+body.page-simulacro-intermedio .sesion-arrow {
+    font-size: 2rem;
+    color: #7f8c8d;
+}
+
+/* ============================================
+   PAGE: PDF VIEWER
+   ============================================ */
+
+body.page-pdf-viewer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #525659;
+    overflow: hidden;
+}
+
+body.page-pdf-viewer #pdf-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 100;
+}
+
+body.page-pdf-viewer .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.page-pdf-viewer .doc-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex: 1;
+    min-width: 200px;
+}
+
+body.page-pdf-viewer .header-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+body.page-pdf-viewer .btn {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+body.page-pdf-viewer .btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+body.page-pdf-viewer .btn:active {
+    transform: translateY(0);
+}
+
+body.page-pdf-viewer .btn-success {
+    background: rgba(46, 204, 113, 0.8);
+    border-color: rgba(46, 204, 113, 1);
+}
+
+body.page-pdf-viewer .btn-success:hover {
+    background: rgba(46, 204, 113, 1);
+}
+
+body.page-pdf-viewer #pdf-toolbar {
+    background: #34495e;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+body.page-pdf-viewer .toolbar-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+body.page-pdf-viewer .toolbar-btn {
+    background: #2c3e50;
+    color: white;
+    border: 1px solid #4a5f7f;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    min-width: 40px;
+    text-align: center;
+}
+
+body.page-pdf-viewer .toolbar-btn:hover:not(:disabled) {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+}
+
+body.page-pdf-viewer .toolbar-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+body.page-pdf-viewer #page-info {
+    background: #2c3e50;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 100px;
+    text-align: center;
+}
+
+body.page-pdf-viewer #page-input {
+    width: 50px;
+    padding: 4px 8px;
+    border: 1px solid #4a5f7f;
+    border-radius: 4px;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+body.page-pdf-viewer #canvas-container {
+    width: 100%;
+    height: calc(100vh - 140px);
+    overflow: auto;
+    background: #525659;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+body.page-pdf-viewer #pdf-canvas {
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    max-width: 100%;
+    height: auto;
+    background: white;
+}
+
+body.page-pdf-viewer #loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+body.page-pdf-viewer .spinner {
+    border: 4px solid rgba(255,255,255,0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body.page-pdf-viewer #nav-footer {
+    background: #34495e;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+body.page-pdf-viewer .nav-btn {
+    flex: 1;
+    padding: 12px;
+    background: #2c3e50;
+    border: 1px solid #4a5f7f;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+    max-width: 300px;
+}
+
+body.page-pdf-viewer .nav-btn:hover:not(.disabled) {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    transform: translateY(-2px);
+}
+
+body.page-pdf-viewer .nav-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+body.page-pdf-viewer .nav-label {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+body.page-pdf-viewer .nav-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    body.page-pdf-viewer .doc-title {
+        font-size: 0.95rem;
+    }
+
+    body.page-pdf-viewer .btn,
+    body.page-pdf-viewer .toolbar-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    body.page-pdf-viewer #pdf-toolbar {
+        justify-content: center;
+    }
+
+    body.page-pdf-viewer .toolbar-group {
+        justify-content: center;
+        width: 100%;
+    }
+
+    body.page-pdf-viewer #canvas-container {
+        height: calc(100vh - 220px);
+        padding: 10px;
+    }
+
+    body.page-pdf-viewer #nav-footer {
+        flex-direction: column;
+    }
+
+    body.page-pdf-viewer .nav-btn {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   PAGE: DOWNLOAD ERROR
+   ============================================ */
+
+body.page-download-error {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body.page-download-error .box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+}
+
+body.page-download-error .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+body.page-download-error h1 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+body.page-download-error p {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+body.page-download-error .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--color-primary-light);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+body.page-download-error .btn:hover {
+    background: var(--color-primary-light-hover);
+}
+
+/* ============================================
+   PAGE: DOWNLOAD LIMIT
+   ============================================ */
+
+body.page-download-limit {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+body.page-download-limit .box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 450px;
+}
+
+body.page-download-limit .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+body.page-download-limit h1 {
+    color: #f39c12;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+body.page-download-limit .info {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+body.page-download-limit .info p {
+    color: #856404;
+    margin: 0;
+}
+
+body.page-download-limit p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+body.page-download-limit .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--color-primary-light);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+body.page-download-limit .btn:hover {
+    background: var(--color-primary-light-hover);
 }
