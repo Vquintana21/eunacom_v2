@@ -223,9 +223,9 @@ if ($paso == 2 && isset($_SESSION['recuperar_nombre'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña - EUNACOM</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= buildUrl('css/style.css') ?>">
 </head>
-<body>
+<body class="page-recuperar">
     <div class="container-login">
         <div class="login-box">
             <h2>Recuperar Contraseña</h2>
