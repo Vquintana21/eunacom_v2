@@ -225,42 +225,9 @@ function mostrarError($mensaje) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Error - Descarga</title>
-        <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { 
-                font-family: 'Segoe UI', sans-serif; 
-                background: linear-gradient(135deg, #667eea, #764ba2); 
-                min-height: 100vh; 
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                padding: 20px;
-            }
-            .box { 
-                background: white; 
-                padding: 40px; 
-                border-radius: 15px; 
-                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                text-align: center; 
-                max-width: 400px; 
-            }
-            .icon { font-size: 4rem; margin-bottom: 20px; }
-            h1 { color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem; }
-            p { color: #7f8c8d; margin-bottom: 25px; line-height: 1.6; }
-            .btn { 
-                display: inline-block; 
-                padding: 12px 30px; 
-                background: #3498db; 
-                color: white; 
-                text-decoration: none; 
-                border-radius: 8px;
-                font-weight: 600;
-                transition: background 0.3s;
-            }
-            .btn:hover { background: #2980b9; }
-        </style>
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="page-download-error">
         <div class="box">
             <div class="icon">❌</div>
             <h1>Error de Descarga</h1>
@@ -282,51 +249,9 @@ function mostrarLimiteExcedido($mensaje) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Límite de Descargas</title>
-        <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { 
-                font-family: 'Segoe UI', sans-serif; 
-                background: linear-gradient(135deg, #667eea, #764ba2); 
-                min-height: 100vh; 
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                padding: 20px;
-            }
-            .box { 
-                background: white; 
-                padding: 40px; 
-                border-radius: 15px; 
-                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                text-align: center; 
-                max-width: 450px; 
-            }
-            .icon { font-size: 4rem; margin-bottom: 20px; }
-            h1 { color: #f39c12; margin-bottom: 15px; font-size: 1.5rem; }
-            .info { 
-                background: #fff3cd; 
-                border: 1px solid #ffc107; 
-                padding: 15px; 
-                border-radius: 8px; 
-                margin: 20px 0; 
-            }
-            .info p { color: #856404; margin: 0; }
-            p { color: #7f8c8d; line-height: 1.6; }
-            .btn { 
-                display: inline-block; 
-                padding: 12px 30px; 
-                background: #3498db; 
-                color: white; 
-                text-decoration: none; 
-                border-radius: 8px;
-                font-weight: 600;
-                margin-top: 20px;
-                transition: background 0.3s;
-            }
-            .btn:hover { background: #2980b9; }
-        </style>
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="page-download-limit">
         <div class="box">
             <div class="icon">⚠️</div>
             <h1>Límite de Descargas Alcanzado</h1>
